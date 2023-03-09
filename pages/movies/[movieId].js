@@ -2,11 +2,11 @@ import React from "react";
 import Head from "next/head";
 
 /* Constants */
-import { MOVIE_DETAIL } from "../../constants/apiLinks";
+// import { MOVIE_DETAIL } from "../../constants/apiLinks";
 import { API_KEY } from "../../constants/common";
 
 /* Components */
-import { MovieDetailPage } from "../../components";
+// import { MovieDetailPage } from "../../components";
 
 export async function getServerSideProps({ query }) {
   const { movieId } = query;
@@ -61,7 +61,7 @@ const MovieDetail = ({ id, movie }) => {
       </Head>
       {/* className="mt-[70px] lg:mt-[60px]" */}
       <section>
-        <MovieDetailPage movieId={id} />
+        {/* <MovieDetailPage movieId={id} /> */}
         {/* <h1>{title}</h1> */}
       </section>
     </>
