@@ -27,43 +27,46 @@ export async function getServerSideProps({ query }) {
 }
 
 const MovieDetail = ({ id, movie }) => {
-  const media_type = "movie";
+  // const media_type = "movie";
 
-  const title = movie.original_title;
-  const backdrop_path = `https://www.themoviedb.org/t/p/original${movie.backdrop_path}`;
-  const overview = movie.overview;
+  // const title = movie?.original_title;
+  // const backdrop_path= `https://www.themoviedb.org/t/p/original${movie?.backdrop_path}`;
+  // const overview = movie?.overview;
 
   return (
-    <>
-      <Head>
-        <title>{title}</title>
-        <meta name="title" content={title} />
-        <meta name="description" content={overview} />
-        {/* <!-- Open Graph / Facebook --> */}
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content={`https://cine.tenyain.com/movies/${movie.id}`}
-        />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={overview} />
-        <meta property="og:image" content={backdrop_path} />
+    // <>
+    //   <Head>
+    //     <title>{title}</title>
+    //     <meta name="title" content={title} />
+    //     <meta name="description" content={overview} />
+    //     {/* <!-- Open Graph / Facebook --> */}
+    //     <meta property="og:type" content="website" />
+    //     <meta
+    //       property="og:url"
+    //       content={`https://cine.tenyain.com/movies/${movie.id}`}
+    //     />
+    //     <meta property="og:title" content={title} />
+    //     <meta property="og:description" content={overview} />
+    //     <meta property="og:image" content={backdrop_path} />
 
-        {/* <!-- Twitter --> */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta
-          property="twitter:url"
-          content={`https://cine.tenyain.com/movies/${movie.id}`}
-        />
-        <meta property="twitter:title" content={title} />
-        <meta property="twitter:description" content={overview} />
-        <meta property="twitter:image" content={backdrop_path} />
-      </Head>
-      {/* className="mt-[70px] lg:mt-[60px]" */}
-      <section>
-        {/* <MovieDetailPage movieId={id} /> */}
-        {/* <h1>{title}</h1> */}
-      </section>
+    //     {/* <!-- Twitter --> */}
+    //     <meta property="twitter:card" content="summary_large_image" />
+    //     <meta
+    //       property="twitter:url"
+    //       content={`https://cine.tenyain.com/movies/${movie.id}`}
+    //     />
+    //     <meta property="twitter:title" content={title} />
+    //     <meta property="twitter:description" content={overview} />
+    //     <meta property="twitter:image" content={backdrop_path} />
+    //   </Head>
+    //   {/* className="mt-[70px] lg:mt-[60px]" */}
+    //   <section>
+    //     {/* <MovieDetailPage movieId={id} /> */}
+    //     {/* <h1>{title}</h1> */}
+    //   </section>
+    // </>
+    <>
+      <h1>This is a movie.</h1>
     </>
   );
 };
