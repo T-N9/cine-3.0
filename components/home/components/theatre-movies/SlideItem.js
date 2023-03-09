@@ -6,7 +6,7 @@ import Hook from "./hook.slideItem";
 
 /* Icons */
 import { PlayCircleOutlineRounded, StarRateRounded } from "@mui/icons-material";
-import { Imdb } from "@icons-pack/react-simple-icons";
+import { SiImdb } from "@icons-pack/react-simple-icons/";
 
 /* Components */
 import TheatreTrailer from "./TheatreTrailer";
@@ -51,6 +51,7 @@ const SlideItem = ({ id, title, backdrop_path, media_type, overview }) => {
 
         <div className="bottom-overlay w-full h-[100px]"></div>
       </div>
+
       <div className="relative flex flew-row items-end -mt-[80px] py-8 px-5 md:py-0 md:px-8">
         {poster_path !== undefined && (
           <img
@@ -85,7 +86,7 @@ const SlideItem = ({ id, title, backdrop_path, media_type, overview }) => {
                 rel="noreferrer"
               >
                 <div>
-                  <Imdb color="#F5C518" />
+                  <SiImdb color="#F5C518" />
                 </div>
               </a>
             </div>
