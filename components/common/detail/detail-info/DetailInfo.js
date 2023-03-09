@@ -7,10 +7,10 @@ import Hook from "./hook.detailInfo";
 import { InsertLinkOutlined } from "@mui/icons-material";
 import { CircularProgress } from "@mui/material";
 import {
-  Facebook,
-  Imdb,
-  Instagram,
-  Twitter,
+  SiFacebook,
+  SiImdb,
+  SiInstagram,
+  SiTwitter,
 } from "@icons-pack/react-simple-icons";
 
 const DetailInfo = ({ media_type, id }) => {
@@ -51,7 +51,7 @@ const DetailInfo = ({ media_type, id }) => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <Facebook color="#1F4287" />
+                  <SiFacebook color="#1F4287" />
                 </a>
               )}
 
@@ -61,7 +61,7 @@ const DetailInfo = ({ media_type, id }) => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <Instagram color="#1F4287" />
+                  <SiInstagram color="#1F4287" />
                 </a>
               )}
 
@@ -71,7 +71,7 @@ const DetailInfo = ({ media_type, id }) => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <Twitter color="#1F4287" />
+                  <SiTwitter color="#1F4287" />
                 </a>
               )}
 
@@ -81,7 +81,7 @@ const DetailInfo = ({ media_type, id }) => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <Imdb color="#1F4287" />
+                  <SiImdb color="#1F4287" />
                 </a>
               )}
             </div>
