@@ -10,7 +10,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1 className='text-blue-700 font-bold'>CINE 3.0 has been initialized.</h1>
+        <h1 className='title-2'>CINE 3.0 has been initialized.</h1>
       </main>
     </>
   )
