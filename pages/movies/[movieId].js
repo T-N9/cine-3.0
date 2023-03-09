@@ -7,25 +7,25 @@ import { API_KEY } from "../../constants/common";
 /* Components */
 // import { MovieDetailPage } from "../../components";
 
-export async function getServerSideProps({ query }) {
-  const { movieId } = query;
+// export async function getServerSideProps({ query }) {
+//   const { movieId } = query;
 
-  const res = await fetch(
-    `https://api.themoviedb.org/3/movie/${movieId}?api_key=68d49bbc8d40fff0d6cafaa7bfd48072&language=en-US`
-  );
-  const data = await res.json();
+//   const res = await fetch(
+//     `https://api.themoviedb.org/3/movie/${movieId}?api_key=68d49bbc8d40fff0d6cafaa7bfd48072&language=en-US`
+//   );
+//   const data = await res.json();
 
-  if (res.ok) {
-    return {
-      props: {
-        id: movieId,
-        movie: data,
-      },
-    };
-  }
-}
+//   if (res.ok) {
+//     return {
+//       props: {
+//         id: movieId,
+//         movie: data,
+//       },
+//     };
+//   }
+// }
 
-const MovieDetail = ({ id, movie }) => {
+const MovieDetail = () => {
   // const media_type = "movie";
 
   // const title = movie?.original_title;
@@ -65,7 +65,7 @@ const MovieDetail = ({ id, movie }) => {
     //   </section>
     // </>
     <>
-      <h1>{id}</h1>
+      <h1>Hello</h1>
     </>
   );
 };
