@@ -12,6 +12,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+        <h1>CINE 3.0 has been initialized.</h1>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
