@@ -1,4 +1,3 @@
-import React from "react";
 import Head from "next/head";
 
 /* Constants */
@@ -12,7 +11,7 @@ export async function getServerSideProps({ query }) {
   const { movieId } = query;
 
   const res = await fetch(
-    `https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}&language=en-US`
+    `https://api.themoviedb.org/3/movie/${movieId}?api_key=68d49bbc8d40fff0d6cafaa7bfd48072&language=en-US`
   );
   const data = await res.json();
 
@@ -66,7 +65,7 @@ const MovieDetail = ({ id, movie }) => {
     //   </section>
     // </>
     <>
-      <h1>This is a movie.</h1>
+      <h1>{id}</h1>
     </>
   );
 };
