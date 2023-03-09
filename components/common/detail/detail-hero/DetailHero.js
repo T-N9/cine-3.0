@@ -143,7 +143,7 @@ const DetailHero = ({
                         Download
                       </h1>
 
-                      <DetailTorrent imdbID={imdbID} />
+                      {/* <DetailTorrent imdbID={imdbID} /> */}
                     </div>
                   )}
                 </div>
