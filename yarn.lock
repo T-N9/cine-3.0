@@ -178,6 +178,18 @@
   resolved "https://registry.npmjs.org/@eslint/js/-/js-8.35.0.tgz"
   integrity sha512-JXdzbRiWclLVoD8sNUjR443VVlYqiYmDVT6rGUEIEHU5YJW0gaVZwV2xgM7D4arkvASqD0IlLUVjHiFuxaftRw==
 
+"@floating-ui/core@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.npmjs.org/@floating-ui/core/-/core-1.2.2.tgz"
+  integrity sha512-FaO9KVLFnxknZaGWGmNtjD2CVFuc0u4yeGEofoyXO2wgRA7fLtkngT6UB0vtWQWuhH3iMTZZ/Y89CMeyGfn8pA==
+
+"@floating-ui/dom@1.2.3":
+  version "1.2.3"
+  resolved "https://registry.npmjs.org/@floating-ui/dom/-/dom-1.2.3.tgz"
+  integrity sha512-lK9cZUrHSJLMVAdCvDqs6Ug8gr0wmqksYiaoj/bxj2gweRQkSuhg2/V6Jswz2KiQ0RAULbqw1oQDJIMpQ5GfGA==
+  dependencies:
+    "@floating-ui/core" "^1.2.2"
+
 "@humanwhocodes/config-array@^0.11.8":
   version "0.11.8"
   resolved "https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.11.8.tgz"
@@ -376,6 +388,14 @@
   version "0.4.2"
   resolved "https://registry.npmjs.org/@tailwindcss/line-clamp/-/line-clamp-0.4.2.tgz"
   integrity sha512-HFzAQuqYCjyy/SX9sLGB1lroPzmcnWv1FHkIpmypte10hptf4oPUfucryMKovZh2u0uiS9U5Ty3GghWfEJGwVw==
+
+"@tanem/react-nprogress@^5.0.31":
+  version "5.0.31"
+  resolved "https://registry.npmjs.org/@tanem/react-nprogress/-/react-nprogress-5.0.31.tgz"
+  integrity sha512-n89OtIuZprlxqUrG+6YUkeWDCZ8oTiyCyIoJW5ovYvL0CDikWopjwgzfi8BBt5UmvLhbNaMJdV2ZOzK8UFK4NA==
+  dependencies:
+    "@babel/runtime" "^7.21.0"
+    hoist-non-react-statics "^3.3.2"
 
 "@types/hoist-non-react-statics@^3.3.1":
   version "3.3.1"
@@ -739,6 +759,11 @@ chokidar@^3.5.3:
     readdirp "~3.6.0"
   optionalDependencies:
     fsevents "~2.3.2"
+
+classnames@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.npmjs.org/classnames/-/classnames-2.3.2.tgz"
+  integrity sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==
 
 client-only@0.0.1:
   version "0.0.1"
@@ -1562,7 +1587,7 @@ ignore@^5.2.0:
   resolved "https://registry.npmjs.org/ignore/-/ignore-5.2.4.tgz"
   integrity sha512-MAb38BcSbH0eHNBxn7ql2NH/kX33OkB3lZ1BNdh7ENeRChHTYsTvWrMubiIAMNS2llXEEgZ1MUOBtXChP3kaFQ==
 
-immer@^9.0.16:
+immer@^9.0.16, immer@>=9.0:
   version "9.0.19"
   resolved "https://registry.npmjs.org/immer/-/immer-9.0.19.tgz"
   integrity sha512-eY+Y0qcsB4TZKwgQzLaE/lqYMlKhv5J9dyd2RhhtGhNo2njPXDqU9XPfcNfa3MIDsdtZt5KlkIsirlo4dHsWdQ==
@@ -2242,7 +2267,7 @@ quick-lru@^5.1.1:
   resolved "https://registry.npmjs.org/quick-lru/-/quick-lru-5.1.1.tgz"
   integrity sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA==
 
-"react-dom@^16.8 || ^17.0 || ^18.0", "react-dom@^17.0.0 || ^18.0.0", react-dom@^18.2.0, react-dom@>=16.6.0, react-dom@18.2.0:
+"react-dom@^16.8 || ^17.0 || ^18.0", "react-dom@^16.8.0 || ^17.0.0 || ^18.0.0", "react-dom@^17.0.0 || ^18.0.0", react-dom@^18.2.0, react-dom@>=16.14.0, react-dom@>=16.6.0, react-dom@18.2.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   integrity sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==
@@ -2277,6 +2302,14 @@ react-is@^18.2.0:
     react-is "^18.0.0"
     use-sync-external-store "^1.0.0"
 
+react-tooltip@^5.9.1:
+  version "5.9.1"
+  resolved "https://registry.npmjs.org/react-tooltip/-/react-tooltip-5.9.1.tgz"
+  integrity sha512-/lt6ZOr6MI2D/TqTq6Obd3/1LqQ10Ifxw90HLnH8reGoqQKMICe0QRyWhxjxMfRqjsH5TVQulb33ZbrjohZnuw==
+  dependencies:
+    "@floating-ui/dom" "1.2.3"
+    classnames "^2.3.2"
+
 react-transition-group@^4.4.5:
   version "4.4.5"
   resolved "https://registry.npmjs.org/react-transition-group/-/react-transition-group-4.4.5.tgz"
@@ -2287,7 +2320,7 @@ react-transition-group@^4.4.5:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
-"react@^16.13 || ^17 || ^18", "react@^16.8 || ^17.0 || ^18.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.9.0 || ^17.0.0 || ^18", "react@^17.0.0 || ^18.0.0", react@^18.2.0, "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", react@>=16.6.0, react@>=16.8.0, react@18.2.0:
+"react@^16.11.0 || ^17.0.0 || ^18.0.0", "react@^16.13 || ^17 || ^18", "react@^16.8 || ^17.0 || ^18.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.9.0 || ^17.0.0 || ^18", "react@^17.0.0 || ^18.0.0", react@^18.2.0, "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", react@>=16.14.0, react@>=16.6.0, react@>=16.8, react@>=16.8.0, react@18.2.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
@@ -2542,6 +2575,13 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
+swr@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.npmjs.org/swr/-/swr-2.1.0.tgz"
+  integrity sha512-4hYl5p3/KalQ1MORealM79g/DtLohmud6yyfXw5l4wjtFksYUnocRFudvyaoUtgj3FrVNK9lS25Av9dsZYvz0g==
+  dependencies:
+    use-sync-external-store "^1.2.0"
+
 synckit@^0.8.4:
   version "0.8.5"
   resolved "https://registry.npmjs.org/synckit/-/synckit-0.8.5.tgz"
@@ -2692,7 +2732,7 @@ uri-js@^4.2.2:
   dependencies:
     punycode "^2.1.0"
 
-use-sync-external-store@^1.0.0:
+use-sync-external-store@^1.0.0, use-sync-external-store@^1.2.0, use-sync-external-store@1.2.0:
   version "1.2.0"
   resolved "https://registry.npmjs.org/use-sync-external-store/-/use-sync-external-store-1.2.0.tgz"
   integrity sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==
@@ -2771,3 +2811,10 @@ yocto-queue@^0.1.0:
   version "0.1.0"
   resolved "https://registry.npmjs.org/yocto-queue/-/yocto-queue-0.1.0.tgz"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
+
+zustand@^4.3.6:
+  version "4.3.6"
+  resolved "https://registry.npmjs.org/zustand/-/zustand-4.3.6.tgz"
+  integrity sha512-6J5zDxjxLE+yukC2XZWf/IyWVKnXT9b9HUv09VJ/bwGCpKNcaTqp7Ws28Xr8jnbvnZcdRaidztAPsXFBIqufiw==
+  dependencies:
+    use-sync-external-store "1.2.0"
