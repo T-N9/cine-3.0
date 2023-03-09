@@ -7,8 +7,8 @@ import { API_KEY } from "../../constants/common";
 /* Components */
 // import { MovieDetailPage } from "../../components";
 
-export async function getServerSideProps({ query }) {
-  const { movieId } = query;
+export async function getServerSideProps(context) {
+  const { movieId } = context.params;
 
   const res = await fetch(
     `https://dummyjson.com/products`
@@ -18,7 +18,6 @@ export async function getServerSideProps({ query }) {
   if (res.ok) {
     return {
       props: {
-        id: movieId,
         movie: data,
       },
     };
