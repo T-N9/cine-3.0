@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import moment from "moment";
+import Image from "next/image";
 
 const UpcomingItem = ({ id, title, poster_path, overview, release_date }) => {
   const route_type = "movies";
@@ -9,7 +10,9 @@ const UpcomingItem = ({ id, title, poster_path, overview, release_date }) => {
     <div className="bg-wah rounded-md overflow-hidden cus-box-shadow">
       <div className=" flex h-full">
         <div className="flex-1 md:flex-2">
-          <img
+          <Image
+            layout="fill"
+            quality='10'
             className="w-[100px] h-full object-cover"
             src={`https://www.themoviedb.org/t/p/w185/${poster_path}`}
             alt={`${title} poster`}

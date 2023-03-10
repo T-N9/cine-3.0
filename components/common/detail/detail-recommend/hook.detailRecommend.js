@@ -1,5 +1,6 @@
 import useSWR from "swr";
 import Link from "next/link";
+import Image from "next/image";
 
 /* Icons */
 import { PhotoTwoTone } from "@mui/icons-material";
@@ -28,11 +29,15 @@ const Hook = (media_type, id) => {
           <Link href={`/${route_type}/${item.id}`}>
             <div>
               {item.backdrop_path ? (
-                <img
-                  className="w-[225px] min-h-[126.6px] lg:w-[263px] lg:min-h-[148.4px] rounded mb-3"
-                  src={`https://www.themoviedb.org/t/p/w533_and_h300_bestv2/${item.backdrop_path}`}
-                  alt={item.name}
-                />
+                <div className="relative w-[225px] min-h-[126.6px] lg:w-[263px] lg:min-h-[148.4px] rounded mb-3 overflow-hidden">
+                  <Image
+                    layout="fill"
+                    quality='10'
+                    className=""
+                    src={`https://www.themoviedb.org/t/p/w533_and_h300_bestv2/${item.backdrop_path}`}
+                    alt={item.name}
+                  />
+                </div>
               ) : (
                 <div className="w-[225px] min-h-[126.6px] lg:w-[263px] lg:min-h-[148.4px] rounded mb-3 text-primary flex justify-center items-center">
                   <PhotoTwoTone />

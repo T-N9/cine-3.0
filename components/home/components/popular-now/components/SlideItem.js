@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import moment from "moment";
+import Image from "next/image";
 
 /* Hook */
 import Hook from "./hook.slideItem";
@@ -21,7 +22,9 @@ const SlideItem = ({
       <div className="w-[200px] relative cursor-pointer select-none">
         <Link href={`${route_type}/${id}`} passHref={true} prefetch>
           <div>
-            <img
+            <Image
+              layout="fill"
+              quality="10"
               className="w-[200px] rounded-xl min-h[295px] mb-1 popular-now-shadow border-2 border-solid border-secondary "
               src={`${poster_path}/${image}`}
               alt={`${title ? title : name}'s poster`}

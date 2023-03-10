@@ -1,4 +1,5 @@
 import useSWR from "swr";
+import Image from "next/image";
 
 const Hook = (media_type, id) => {
 
@@ -17,8 +18,8 @@ const Hook = (media_type, id) => {
 
         backdropsList = backdrops.map((item, index) => {
             return (
-                <div key={index} className="min-w-[200px] lg:min-w-[350px]">
-                    <img className="w-[200px] lg:w-[350px]" src={`https://image.tmdb.org/t/p/w500${item.file_path}`} alt="backdrops" />
+                <div key={index} className="relative h-[200px] w-[350px]">
+                    <Image layout="fill" quality="10" src={`https://image.tmdb.org/t/p/w500${item.file_path}`} alt="backdrops" />
                 </div>
             )
         })

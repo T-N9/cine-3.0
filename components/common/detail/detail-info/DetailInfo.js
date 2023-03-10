@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 /* Hook */
 import Hook from "./hook.detailInfo";
@@ -102,7 +103,9 @@ const DetailInfo = ({ media_type, id }) => {
                   {networks.map((item) => {
                     return (
                       <span key={item.name}>
-                        <img
+                        <Image
+                          layout="fill"
+                          quality="10"
                           src={`https://www.themoviedb.org/t/p/h30${item.logo_path}`}
                           alt={item.name}
                         />

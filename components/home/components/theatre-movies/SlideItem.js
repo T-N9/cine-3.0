@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 /* Hook */
 import Hook from "./hook.slideItem";
@@ -54,7 +55,9 @@ const SlideItem = ({ id, title, backdrop_path, media_type, overview }) => {
 
       <div className="relative flex flew-row items-end -mt-[80px] py-8 px-5 md:py-0 md:px-8">
         {poster_path !== undefined && (
-          <img
+          <Image
+            layout="fill"
+            quality="10"
             className="relative w-[100px] min-w-[100px] min-h-[150px] z-50 md:w-[160px] md:min-w-[160px] md:min-h-[240px] rounded-md poster-shadow"
             src={poster_path}
             alt={title}
