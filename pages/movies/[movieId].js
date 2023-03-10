@@ -36,10 +36,12 @@ export async function getStaticPaths() {
     .then((res) => res.json())
     .then((data) => data);
 
+  const paths = getData.results.map((d) => ({
+    params: { movieId: d.id.toString() },
+  }));
+
   return {
-    paths: getData?.results?.map((d) => ({
-      params: { movieId: d.id.toString() },
-    })),
+    paths,
     fallback: true,
   };
 }
