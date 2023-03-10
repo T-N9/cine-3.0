@@ -20,7 +20,7 @@ const SlideItem = ({
   return (
     <div className="py-5">
       <div className="w-[200px] relative cursor-pointer select-none">
-        <Link href={`${route_type}/${id}`} passHref={true} prefetch>
+        <Link href={`${route_type}/${id}`} passHref={true}>
           <div>
             <Image
               layout="fill"
