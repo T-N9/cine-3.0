@@ -48,7 +48,8 @@ export async function getStaticProps({ params }) {
   const { movieId } = params;
 
   const getMovie = await fetch(
-    `${MOVIE_DETAIL}${movieId}?api_key=${API_KEY}&language=en-US`
+    `${MOVIE_DETAIL}${movieId}?api_key=${API_KEY}&language=en-US`,
+    { timeout: 5000 } // Increase timeout to 5 seconds
   )
     .then((res) => res.json())
     .then((data) => data);
@@ -58,6 +59,7 @@ export async function getStaticProps({ params }) {
       id: movieId,
       movie: getMovie,
     },
+    revalidate: 60, // Revalidate every 60 seconds
   };
 }
 
