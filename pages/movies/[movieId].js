@@ -7,21 +7,6 @@ import { API_KEY } from "../../constants/common";
 /* Components */
 import { MovieDetailPage } from "../../components";
 
-export async function getServerSideProps(context) {
-  const { movieId } = context.params;
-
-  const getMovie = await fetch(`${MOVIE_DETAIL}${movieId}?api_key=${API_KEY}`)
-    .then((res) => res.json())
-    .then((data) => data);
-
-  return {
-    props: {
-      id: movieId,
-      movie: getMovie,
-    },
-  };
-}
-
 const MovieDetail = ({ id, movie }) => {
   // const media_type = "movie";
 
@@ -39,5 +24,35 @@ const MovieDetail = ({ id, movie }) => {
     </>
   );
 };
+
+export async function getStaticPaths() {
+  const getData = await fetch(
+    `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`
+  )
+    .then((res) => res.json())
+    .then((data) => data);
+
+  return {
+    paths: getData?.results?.map((d) => ({
+      params: { movieId: d.id.toString() },
+    })),
+    fallback: "blocking",
+  };
+}
+
+export async function getStaticProps(context) {
+  const { movieId } = context.params;
+
+  const getMovie = await fetch(`${MOVIE_DETAIL}${movieId}?api_key=${API_KEY}`)
+    .then((res) => res.json())
+    .then((data) => data);
+
+  return {
+    props: {
+      id: movieId,
+      movie: getMovie,
+    },
+  };
+}
 
 export default MovieDetail;
