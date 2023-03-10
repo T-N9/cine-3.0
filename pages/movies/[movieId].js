@@ -15,14 +15,13 @@ const MovieDetail = ({ id, movie }) => {
   // const backdrop_path= `https://www.themoviedb.org/t/p/original${movie?.backdrop_path}`;
   // const overview = movie?.overview;
 
-
   const router = useRouter();
 
   if (router.isFallback) {
     return <div>loading...</div>;
   }
 
-  console.log({router})
+  console.log({ router });
   return (
     <>
       <section>{movie && <MovieDetailPage movieId={id} />}</section>
@@ -45,8 +44,8 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps(context) {
-  const { movieId } = context.params;
+export async function getStaticProps({ params }) {
+  const { movieId } = params;
 
   const getMovie = await fetch(
     `${MOVIE_DETAIL}${movieId}?api_key=${API_KEY}&language=en-US`
