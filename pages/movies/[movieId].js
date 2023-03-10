@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 /* Constants */
 import { MOVIE_DETAIL } from "../../constants/apiLinks";
@@ -15,12 +16,15 @@ const MovieDetail = ({ id, movie }) => {
   // const overview = movie?.overview;
 
   console.log({ movie });
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <div>loading...</div>;
+  }
 
   return (
     <>
-      <section>
-        <MovieDetailPage movieId={id} />
-      </section>
+      <section>{movie && <MovieDetailPage movieId={id} />}</section>
     </>
   );
 };
@@ -36,7 +40,7 @@ export async function getStaticPaths() {
     paths: getData?.results?.map((d) => ({
       params: { movieId: d.id.toString() },
     })),
-    fallback: "blocking",
+    fallback: true,
   };
 }
 
