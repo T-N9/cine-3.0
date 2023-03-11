@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 /* Major Components */
-import { HomePage } from "../components";
+// import { HomePage } from "../components";
 
 export default function Home() {
   return (
@@ -57,7 +57,10 @@ export default function Home() {
       </Head>
 
       <main className="font-primary overflow-hidden">
-        <HomePage />
+        {/* <HomePage /> */}
+
+        This is home.
+
       </main>
     </>
   );
