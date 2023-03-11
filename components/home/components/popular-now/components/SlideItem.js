@@ -22,13 +22,16 @@ const SlideItem = ({
       <div className="w-[200px] relative cursor-pointer select-none">
         <Link href={`${route_type}/${id}`} passHref={true}>
           <div>
-            <Image
-              layout="fill"
-              quality="10"
-              className="w-[200px] rounded-xl min-h[295px] mb-1 popular-now-shadow border-2 border-solid border-secondary "
-              src={`${poster_path}/${image}`}
-              alt={`${title ? title : name}'s poster`}
-            />
+            <div className="w-[200px] rounded-xl min-h-[295px] mb-1 relative popular-now-shadow border-2 border-solid border-secondary overflow-hidden">
+              <Image
+                layout="fill"
+                quality="10"
+                className="  "
+                src={`${poster_path}/${image}`}
+                alt={`${title ? title : name}'s poster`}
+              />
+            </div>
+
             <div className="px-3 py-1">
               <h1 className="text-[18px]">{title ? title : name}</h1>
               <p className="text-sm my-1">

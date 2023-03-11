@@ -9,10 +9,12 @@ const UpcomingItem = ({ id, title, poster_path, overview, release_date }) => {
   return (
     <div className="bg-wah rounded-md overflow-hidden cus-box-shadow">
       <div className=" flex h-full">
-        <div className="flex-1 md:flex-2">
+        <div className="flex relative w-[100px] h-[150px]">
           <Image
-            layout="fill"
+          layout="fill"
             quality='10'
+            // width={100}
+            // height={150}
             className="w-[100px] h-full object-cover"
             src={`https://www.themoviedb.org/t/p/w185/${poster_path}`}
             alt={`${title} poster`}

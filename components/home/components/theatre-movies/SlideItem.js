@@ -55,13 +55,15 @@ const SlideItem = ({ id, title, backdrop_path, media_type, overview }) => {
 
       <div className="relative flex flew-row items-end -mt-[80px] py-8 px-5 md:py-0 md:px-8">
         {poster_path !== undefined && (
-          <Image
-            layout="fill"
-            quality="10"
-            className="relative w-[100px] min-w-[100px] min-h-[150px] z-50 md:w-[160px] md:min-w-[160px] md:min-h-[240px] rounded-md poster-shadow"
-            src={poster_path}
-            alt={title}
-          />
+          <div className="relative w-[100px] min-w-[100px] min-h-[150px] z-50 md:w-[160px] md:min-w-[160px] md:min-h-[240px] rounded-md">
+            <Image
+              layout="fill"
+              quality="10"
+              className="rounded-md poster-shadow"
+              src={poster_path}
+              alt={title}
+            />
+          </div>
         )}
 
         <div className="w-full ml-5 pb-0 md:pb-8 flex justify-between">
